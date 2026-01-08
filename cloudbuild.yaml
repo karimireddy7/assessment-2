@@ -1,1 +1,32 @@
+steps:
+  
+  - name: hashicorp/terraform
+    entrypoint: sh
+    args:
+      - "-c"
+      - |
+      
+        
+        terraform init -reconfigure
 
+
+  - name: hashicorp/terraform
+    entrypoint: sh
+    args:
+      - "-c"
+      - |
+
+
+        terraform plan
+
+
+  - name: hashicorp/terraform
+    entrypoint: sh
+    args:
+      - "-c"
+      - |
+
+
+        terraform apply -auto-approve
+options:
+  logging: CLOUD_LOGGING_ONLY
