@@ -1,1 +1,1 @@
-
+variable "instance_group" {}
